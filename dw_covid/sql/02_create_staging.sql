@@ -1,0 +1,53 @@
+-- 02_create_staging.sql
+-- Cria a tabela de staging sem regras de negócio, com todos os campos como TEXT
+-- Os nomes das colunas espelham o cabeçalho original do CSV para facilitar o COPY.
+
+DROP TABLE IF EXISTS stg.notificacao_raw;
+
+CREATE TABLE stg.notificacao_raw (
+    DataNotificacao TEXT,
+    DataCadastro TEXT,
+    DataDiagnostico TEXT,
+    DataColeta_RT_PCR TEXT,
+    DataColetaTesteRapido TEXT,
+    DataColetaSorologia TEXT,
+    DataColetaSorologiaIGG TEXT,
+    DataEncerramento TEXT,
+    DataObito TEXT,
+    Classificacao TEXT,
+    Evolucao TEXT,
+    CriterioConfirmacao TEXT,
+    StatusNotificacao TEXT,
+    Municipio TEXT,
+    Bairro TEXT,
+    FaixaEtaria TEXT,
+    IdadeNaDataNotificacao TEXT,
+    Sexo TEXT,
+    RacaCor TEXT,
+    Escolaridade TEXT,
+    Gestante TEXT,
+    Febre TEXT,
+    DificuldadeRespiratoria TEXT,
+    Tosse TEXT,
+    Coriza TEXT,
+    DorGarganta TEXT,
+    Diarreia TEXT,
+    Cefaleia TEXT,
+    ComorbidadePulmao TEXT,
+    ComorbidadeCardio TEXT,
+    ComorbidadeRenal TEXT,
+    ComorbidadeDiabetes TEXT,
+    ComorbidadeTabagismo TEXT,
+    ComorbidadeObesidade TEXT,
+    FicouInternado TEXT,
+    ViagemBrasil TEXT,
+    ViagemInternacional TEXT,
+    ProfissionalSaude TEXT,
+    PossuiDeficiencia TEXT,
+    MoradorDeRua TEXT,
+    ResultadoRT_PCR TEXT,
+    ResultadoTesteRapido TEXT,
+    ResultadoSorologia TEXT,
+    ResultadoSorologia_IGG TEXT,
+    TipoTesteRapido TEXT
+);
